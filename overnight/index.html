@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#a9a7d1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Nightkeep: overnight agent kit for Claude Code</title>
+<meta name="description" content="Plan tasks one night, let Claude Code run them the next, read a report in the morning. It stops and asks before publishing, contacting anyone, or spending money.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body>
+<header class="bar">
+  <a href="../">Nightkeep</a>
+  <span class="bar-right">
+    <a class="bar-label" href="#signup">Join the waitlist</a>
+  </span>
+</header>
+
+<main>
+<section class="hero">
+  <h1>Let Claude Code work overnight.</h1>
+  <div class="hero-foot">
+    <p class="lead">Nightkeep plans tasks in the evening, runs them while you sleep, and leaves a short report for the morning. When a task would publish something, contact someone, or spend money, it stops and leaves that one for you.</p>
+    <div class="hero-actions">
+      <a class="btn" href="TALLY_URL">Join the waitlist</a>
+      <span class="small">No payment now. Founding price is 50% off.</span>
+    </div>
+  </div>
+</section>
+
+<div class="tone-night">
+<section>
+  <div class="wrap split">
+    <h2>Leaving an agent alone all night is the hard part.</h2>
+    <ul class="pains">
+      <li><p><strong>One wrong action and you find out tomorrow.</strong> <span>A stray command, an email sent, a deploy. Nobody is there to stop it.</span></p></li>
+      <li><p><strong>In the morning, you can't tell what happened.</strong> <span>Chat logs scroll away. You want one short note per task: done, blocked, or failed, and where the files are.</span></p></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What's in the kit</h2>
+    <dl class="kit">
+      <div><dt>Nightly planner</dt><dd>A stronger model reviews the project and queues the next night's tasks, five at most. Each task says what done looks like and where the output goes.</dd></div>
+      <div><dt>Task runner</dt><dd>A cheaper model works through the queue one task at a time, 30 minutes each.</dd></div>
+      <div><dt>Narrow permissions</dt><dd>It writes only to the folders you list. It has no shell.</dd></div>
+      <div><dt>Hand-off rule</dt><dd>Anything that publishes, contacts someone, or spends money is left for you, with the reason written down.</dd></div>
+      <div><dt>Morning report</dt><dd>Every task leaves a short note, and the results line up on one board.</dd></div>
+      <div><dt>Untrusted text rule</dt><dd>Instructions found inside web pages, files, or comments are treated as data, never as orders.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What it can't do, and why</h2>
+    <ul class="command">
+      <li><code>--permission-mode dontAsk</code><span>Anything not on the list is refused. Your own "auto" settings can't approve it in the middle of the night.</span></li>
+      <li><code>--disallowedTools Bash</code><span>No shell at all. Even harmless-looking commands are off.</span></li>
+      <li><code>--setting-sources local --strict-mcp-config</code><span>Your personal settings and connected tools don't leak in and widen what it can reach.</span></li>
+      <li><code>Read(&lt;project&gt;/**)</code><span>It reads the project folder and nothing else on your machine.</span></li>
+      <li><code>Edit(&lt;project&gt;/work/**)</code><span>It writes to the output folders only. Its own rules and settings stay untouched.</span></li>
+    </ul>
+    <p class="small after">This lowers the risk. It doesn't remove it. You still read the output, and you decide what gets published or sent.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>One night, start to finish</h2>
+    <ol class="night-log">
+      <li><time>23:30</time><p>The planner reads your notes and queues three tasks: draft the v0.3 changelog, compare three competing libraries, post the changelog to the blog.</p></li>
+      <li><time>01:10</time><p>Changelog draft finished.<span class="state">work/changelog-v0.3.md</span></p></li>
+      <li><time>02:40</time><p>Library comparison finished, with sources.<span class="state">work/research/libs.md</span></p></li>
+      <li><time>03:55</time><p>The blog post would publish something, so the runner stops and writes down why.<span class="state">BLOCKED: publishing to the blog needs a human</span></p></li>
+    </ol>
+  </div>
+</section>
+
+</div>
+
+<section class="dawn">
+  <div class="wrap">
+    <h2>07:00. Your morning report.</h2>
+<pre class="report"><b>2 done, 1 waiting for you</b>
+
+done      Draft the v0.3 changelog
+          work/changelog-v0.3.md
+done      Compare three competing libraries
+          work/research/libs.md
+blocked   Post the changelog to the blog
+          Publishing needs a human.</pre>
+    <p class="lead">Read the drafts over coffee, publish the changelog yourself, and the planner queues tonight's tasks.</p>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <h2>Pricing</h2>
+    <div class="plans">
+      <div class="plan"><h3>Monthly</h3><p class="price">$19<small> / month</small></p><p>All updates while you're subscribed. Cancel any time.</p></div>
+      <div class="plan"><h3>One-time</h3><p class="price">$79</p><p>Includes 3 months of updates. After that, updates are optional at $7 a month.</p></div>
+    </div>
+    <p class="small after">Join the waitlist now for the founding price, 50% off. No payment is taken when you join.</p>
+  </div>
+</section>
+
+<section id="signup" class="cta-end">
+  <div class="wrap">
+    <h2>Get it when it's ready.</h2>
+    <p>The form asks for your email, which price you'd pick, and what you'd hand to it first.</p>
+    <div class="hero-actions">
+      <a class="btn" href="TALLY_URL">Join the waitlist</a>
+      <span class="small">Joining isn't a purchase. You'll get an email before anything is charged.</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap faq">
+    <h2>Questions</h2>
+    <details><summary>Does it really run while I sleep?</summary><p>Yes. The runner is built for unattended runs, scheduled on your own machine or server. Watch the first few runs yourself.</p></details>
+    <details><summary>Can it send emails or publish for me?</summary><p>No, by design. Those tasks stop with a note and wait for you.</p></details>
+    <details><summary>What do I need?</summary><p>Claude Code and an Anthropic account. Model usage is billed by Anthropic, not by Nightkeep.</p></details>
+    <details><summary>Is it fully safe?</summary><p>No tool can promise that. The kit limits where the agent writes, what it can run, and how long it works, and it hands risky actions to you. Read the output.</p></details>
+    <details><summary>Will I be charged if I join the waitlist?</summary><p>No. Joining only records your email and the price you'd pick. You'll be contacted before any charge.</p></details>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">Nightkeep is an independent product and is not affiliated with Anthropic. "Claude" and "Claude Code" are trademarks of Anthropic.</footer>
+</body>
+</html>
